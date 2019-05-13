@@ -4,7 +4,7 @@
     'name' : 'tareassos',
 	'summary' : 'Módulo realizado por SOS, SGE 18-19',
     'version' : '1.0',
-	'licence' : 'GPL-3',
+	'licence' : 'AGPL-3',
 	'website' : 'https://www.orantes.com',
 	'category' : 'Tools',
     'author' : 'Sebastián Orantes Solera',
