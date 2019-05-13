@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+ 
+        <menuitem id="menu_tareassos"  name="TareasSOS" sequence="10" />
+        <menuitem id="menu_tareassos_view"  name="tareassos" parent="menu_tareassos"/>
+ 
+        <record  id="listar_tareas_action" model="ir.actions.act_window"> 
+            <field name="name">tareassos</field>
+            <field name="res_model">tareassos.tareassos</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+ 
+        <menuitem id="menu_tareassos_listar_tareas"  name="Listar Tareas" parent="menu_tareassos_view" action="listar_tareas_action"/>
+ 
+        <record  id="view_tareassos_tree" model="ir.ui.view">
+            <field name="name">view.tareassos.tareassos.tree</field>
+            <field name="model">tareassos.tareassos</field>
+            <field name="arch" type="xml">
+                <tree string="Tarea">
+                    <field name="titulo"/>
+                    <field name="descripcion"/>
+                    <field name="terminada"/>
+                    <field name="activa"/>
+                </tree>
+            </field>
+        </record>
+ 
+ 
+        <record  id="view_tareassos_form" model="ir.ui.view">
+            <field name='name'>view.tareassos.tareassos.form</field>
+            <field name="model">tareassos.tareassos</field>
+            <field name="arch" type="xml">
+                <form string="Tarea">
+                    <sheet>
+                        
+                        <notebook colspan="4">
+                            <page string="Cita">
+                                <field name="cita"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+ 
+    </data>
+</odoo>
