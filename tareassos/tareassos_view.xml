@@ -35,8 +35,8 @@
                     <sheet>
                         
                         <notebook colspan="4">
-                            <page string="Cita">
-                                <field name="cita"/>
+                            <page string="Tarea">
+                                <field name="Tarea"/>
                             </page>
                         </notebook>
                     </sheet>
