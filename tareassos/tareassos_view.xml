@@ -11,7 +11,7 @@
             <field name="view_mode">tree,form</field>
         </record>
  
-        <menuitem id="menu_tareassos_listar_tareas"  name="Listar Tareas" parent="menu_tareassos_view" action="listar_tareas_action"/>
+        <menuitem id="menu_tareassos_nueva_tarea"  name="nueva tarea" parent="menu_tareassos_view" action="nueva_tarea_action"/>
  
         <record  id="view_tareassos_tree" model="ir.ui.view">
             <field name="name">tareassos.tareassos.tree</field>
