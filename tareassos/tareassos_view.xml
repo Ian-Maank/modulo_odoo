@@ -8,7 +8,7 @@
         <record  id="listar_tareas_action" model="ir.actions.act_window"> 
             <field name="name">tareassos</field>
             <field name="res_model">tareassos.tareassos</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,filter</field>
         </record>
  
         <menuitem id="menu_tareassos_nueva_tarea"  name="nueva tarea" parent="menu_tareassos_view" action="nueva_tarea_action"/>
