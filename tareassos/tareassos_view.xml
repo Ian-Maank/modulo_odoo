@@ -2,7 +2,7 @@
 <odoo>
     <data>
  
-        <menuitem id="menu_tareassos"  name="tareassos" sequence="10" />
+        <menuitem id="menu_tareassos"  name="tareassos" sequence="30" />
         <menuitem id="menu_tareassos_view"  name="tareassos" parent="menu_tareassos"/>
  
         <record  id="listar_tareas_action" model="ir.actions.act_window"> 
