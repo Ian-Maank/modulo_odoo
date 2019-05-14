@@ -2,7 +2,7 @@
 <odoo>
     <data>
  
-        <menuitem id="menu_tareassos"  name="TareasSOS" sequence="10" />
+        <menuitem id="menu_tareassos"  name="tareassos" sequence="10" />
         <menuitem id="menu_tareassos_view"  name="tareassos" parent="menu_tareassos"/>
  
         <record  id="listar_tareas_action" model="ir.actions.act_window"> 
@@ -14,29 +14,44 @@
         <menuitem id="menu_tareassos_listar_tareas"  name="Listar Tareas" parent="menu_tareassos_view" action="listar_tareas_action"/>
  
         <record  id="view_tareassos_tree" model="ir.ui.view">
-            <field name="name">view.tareassos.tareassos.tree</field>
+            <field name="name">tareassos.tareassos.tree</field>
             <field name="model">tareassos.tareassos</field>
             <field name="arch" type="xml">
-                <tree string="Tarea">
+                <tree string="tareassos">
                     <field name="titulo"/>
                     <field name="descripcion"/>
                     <field name="terminada"/>
-                    <field name="activa"/>
+                    <field name="activa" />
                 </tree>
             </field>
         </record>
  
  
         <record  id="view_tareassos_form" model="ir.ui.view">
-            <field name='name'>view.tareassos.tareassos.form</field>
+            <field name='name'>tareassos.tareassos.form</field>
             <field name="model">tareassos.tareassos</field>
             <field name="arch" type="xml">
-                <form string="Tarea">
+                <form string="tareassos">
                     <sheet>
-                        
+                        <field name="photo" widget="image" class="oe_left oe_avatar" />
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td style="padding-right:10px;"><field name="titulo" required="1" placeholder="" /></td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
                         <notebook colspan="4">
-                            <page string="Tarea">
-                                <field name="Tarea"/>
+                            <page name="personal_information"
+                                string="Introducir Tarea">
+                                <group col="4" colspan="4"
+                                    name="personal_detail">                      
+                                       <field name="descripcion" />
+                                       <field name="terminada" />
+                                       <field name="activa" />
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -44,5 +59,17 @@
             </field>
         </record>
  
+		<record id="view_tareassos_filter" model="ir.ui.view">
+			<field name='name'>tareassos.tareassos.filter</field>
+            <field name="model">tareassos.tareassos</field>
+            <field name="arch" type="xml">
+				<search>
+					<field name="name"/>
+                    <filter string="Not Done" domain="[('is_done','=',False)]"/>
+                    <filter string="Done" domain="[('is_done','!=',False)]"/>
+				</search>
+			</field>
+		</record>
+
     </data>
 </odoo>
