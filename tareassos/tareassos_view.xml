@@ -20,8 +20,8 @@
                 <tree string="tareassos">
                     <field name="titulo"/>
                     <field name="descripcion"/>
-                    <field name="terminada"/>
-                    <field name="activa" />
+                    <field name="is_done"/>
+                    <field name="active" />
                 </tree>
             </field>
         </record>
@@ -49,8 +49,8 @@
                                 <group col="4" colspan="4"
                                     name="personal_detail">                      
                                        <field name="descripcion" />
-                                       <field name="terminada" />
-                                       <field name="activa" />
+                                       <field name="is_done" />
+                                       <field name="active" />
                                 </group>
                             </page>
                         </notebook>
